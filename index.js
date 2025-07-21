@@ -2,7 +2,7 @@ const express = require("express");
 const cookieParser = require("cookie-parser"); // Middleware to parse cookies
 
 const app = express();
-const PORT = 3001;
+const PORT = 3000;
 
 // Middleware to parse cookies
 app.use(cookieParser());
