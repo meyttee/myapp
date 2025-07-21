@@ -13,7 +13,6 @@ app.get("/cookie/set", (req, res) => {
   res.cookie("user", "JohnDoe", {
     httpOnly: true, // Prevent client-side access (security)
     maxAge: 24 * 60 * 60 * 1000, // Set expiration time (1 day)
-    sameSite: "strict", // SameSite policy
     secure: false, // Set to true if using HTTPS
   });
   res.send("set");
@@ -27,7 +26,6 @@ app.get("/cookie/update", (req, res) => {
     res.cookie("user", "JaneDoe", {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000,
-      sameSite: "strict",
       secure: false,
     });
     res.send("Cookie has been updated!");
